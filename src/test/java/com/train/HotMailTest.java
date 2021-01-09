@@ -82,7 +82,7 @@ public class HotMailTest {
      }
      
      @Test
-     public void testLoginFile() throws InterruptedException, FileNotFoundException {
+     public void testLoginFile() throws InterruptedException, FileNotFoundException, IOException {
        driver.get("http://www.hotmail.com");
         WebElement e=driver.findElement(By.partialLinkText("Sign"));
         e.click();
@@ -225,7 +225,7 @@ public class HotMailTest {
      
      @Test
      public void testData() throws FileNotFoundException, IOException{
-         Workbook wb=new XSSFWorkbook(new FileInputStream(new File("c:\\qa\\data.xlsx")));
+        Workbook wb=new XSSFWorkbook(new FileInputStream(new File("c:\\qa\\data.xlsx")));
         Sheet sh=wb.getSheetAt(0);
         String fname=sh.getRow(0).getCell(0).getStringCellValue();
         String lname=sh.getRow(0).getCell(1).getStringCellValue();

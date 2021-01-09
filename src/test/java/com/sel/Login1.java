@@ -5,6 +5,8 @@
  */
 package com.sel;
 
+package com.example.tests;
+
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -15,14 +17,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class GoogleSearchTest {
+public class Login1 {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
-  @Before
-  public void setUp() {
+
+    @Before
+    public void setUp() {
        System.setProperty("webdriver.chrome.driver", "c:\\qa\\drivers\\chromedriver.exe");
        driver=new ChromeDriver();
        driver.manage().window().maximize();
@@ -30,12 +33,17 @@ public class GoogleSearchTest {
     }
 
   @Test
-  public void testGoogleSearch() throws Exception {
-    driver.get("https://www.google.com/");
-    driver.findElement(By.name("q")).click();
-    driver.findElement(By.name("q")).clear();
-    driver.findElement(By.name("q")).sendKeys("selenium jobs");
-    driver.findElement(By.id("tsf")).submit();
+  public void testLogin1() throws Exception {
+    driver.get("http://advantageonlineshopping.com/#/");
+    driver.findElement(By.id("menuUser")).click();
+    driver.findElement(By.name("username")).click();
+    driver.findElement(By.name("username")).clear();
+    driver.findElement(By.name("username")).sendKeys("nltest2");
+    driver.findElement(By.name("password")).clear();
+    driver.findElement(By.name("password")).sendKeys("Abc@1234");
+    driver.findElement(By.id("sign_in_btnundefined")).click();
+    driver.findElement(By.id("menuUserSVGPath")).click();
+    driver.findElement(By.xpath("//div[@id='loginMiniTitle']/label[3]")).click();
   }
 
   @After

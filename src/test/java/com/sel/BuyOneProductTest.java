@@ -54,7 +54,7 @@ public class BuyOneProductTest {
     // public void hello() {}
     @Test
     public void testBuyOneProduct() throws InterruptedException{
-        driver.get("http://qwqwqwwadvantageonlineshopping.com/");
+        driver.get("<<readfromfile>>");
         driver.findElement(By.id("speakersTxt")).click();
         driver.findElement(By.name("buy_now")).click();
         //driver.findElements(By.id("rabbit")).get(0)
@@ -63,7 +63,7 @@ public class BuyOneProductTest {
         driver.findElement(By.name("save_to_cart")).click();
         driver.findElement(By.id("menuCart")).click();
         driver.findElement(By.id("checkOutButton")).click();
-        driver.findElement(By.name("usernameInOrderPayment")).sendKeys("nltest");
+       driver.findElement(By.name("username")).sendKeys("Demo");
         driver.findElement(By.name("passwordInOrderPayment")).sendKeys("Abc@1239");
         driver.findElement(By.id("login_btnundefined")).click();
         driver.findElement(By.id("next_btn")).click();
