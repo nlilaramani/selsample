@@ -100,5 +100,6 @@ public class AShopLoginTest {
         HomePage homePage=new HomePage(driver);
         LoginPage loginPage=homePage.getSignin();
         loginPage.login("nltest", "Abc@1239");
+       
     }
 }
