@@ -38,7 +38,7 @@ public class TabsTest {
     WebDriver driver;
     @Before
     public void setUp() {
-       System.setProperty("webdriver.chrome.driver", "c:\\qa\\drivers\\chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver", "c:\\qa\\chromedriver.exe");
        driver=new ChromeDriver();
        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }

@@ -37,7 +37,7 @@ public class HotmailTest {
     WebDriver driver;
     @Before
     public void setUp() {
-       System.setProperty("webdriver.chrome.driver", "c:\\qa\\drivers\\chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver", "c:\\qa\\chromedriver.exe");
        driver=new ChromeDriver();
        driver.manage().window().maximize();
        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -58,8 +58,8 @@ public class HotmailTest {
         driver.findElement(By.partialLinkText("Sign in")).click(); // click on signin link
         driver.findElement(By.id("i0116")).sendKeys("SelSample@hotmail.com");
         driver.findElement(By.id("idSIButton9")).click();
-        //Thread.currentThread().sleep(5000);
-        //Thread.sleep(0);
+        Thread.currentThread().sleep(5000);
+        Thread.sleep(0);
         WebElement e=driver.findElement(By.name("passwd"));
         e.clear();
         e.sendKeys("Sel@123!");
